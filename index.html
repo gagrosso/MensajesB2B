@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenZ Sales Text Studio</title>
+    <meta
+      name="description"
+      content="Generador de mensajes comerciales para audiencias Gen Z con enfoque consultivo y propuesta de valor inspirada en TGV / TeGeVe."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <span class="logo">⚡ GenZ Sales Text Studio</span>
+        <a class="ghost-link" href="#generator">Ir al generador</a>
+      </nav>
+
+      <section class="hero-content">
+        <p class="badge">Conversaciones que convierten, sin sonar robótico</p>
+        <h1>Mensajes de ventas para Gen Z con foco en valor real</h1>
+        <p>
+          Inspirado en la propuesta de valor de TGV / TeGeVe: entender el negocio,
+          optimizar costos y construir soluciones tecnológicas sostenibles.
+        </p>
+        <div class="chips">
+          <span>+30 años de experiencia</span>
+          <span>Equipos multidisciplinarios</span>
+          <span>Delivery internacional</span>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="generator" class="panel">
+        <h2>1) Configura tu mensaje</h2>
+        <form id="prompt-form">
+          <div class="grid">
+            <label>
+              Producto / servicio
+              <input
+                required
+                name="product"
+                placeholder="Ej: Implementación SAP S/4HANA"
+              />
+            </label>
+
+            <label>
+              Perfil del lead
+              <input
+                required
+                name="audience"
+                placeholder="Ej: Líder de operaciones de una fintech"
+              />
+            </label>
+
+            <label>
+              Objetivo comercial
+              <input
+                required
+                name="goal"
+                placeholder="Ej: Agendar discovery call de 20 min"
+              />
+            </label>
+
+            <label>
+              Tono
+              <select name="tone">
+                <option value="cercano">Cercano</option>
+                <option value="consultivo">Consultivo</option>
+                <option value="directo">Directo</option>
+              </select>
+            </label>
+
+            <label>
+              Canal
+              <select name="channel">
+                <option value="whatsapp">WhatsApp</option>
+                <option value="linkedin">LinkedIn DM</option>
+                <option value="email">Email corto</option>
+              </select>
+            </label>
+
+            <label>
+              CTA preferido
+              <input
+                name="cta"
+                placeholder="Ej: ¿Te va bien martes o jueves para una demo?"
+              />
+            </label>
+          </div>
+
+          <label>
+            Contexto extra (puedes pegar insights de tu investigación profunda)
+            <textarea
+              name="context"
+              rows="4"
+              placeholder="Ej: El cliente busca reducir tiempos operativos 25% y tiene deuda técnica en integraciones..."
+            ></textarea>
+          </label>
+
+          <label>
+            API key de Hugging Face (opcional para usar LLM gratuito)
+            <input
+              type="password"
+              name="hfToken"
+              placeholder="hf_xxx"
+              autocomplete="off"
+            />
+          </label>
+
+          <div class="actions">
+            <button type="submit">Generar 3 versiones</button>
+            <button type="button" id="copy-btn" class="secondary">Copiar resultado</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>2) Resultado</h2>
+        <p id="status">Completa el formulario para generar mensajes.</p>
+        <pre id="output"></pre>
+      </section>
+
+      <section class="panel value-prop">
+        <h2>Framework de valor (TGV / TeGeVe style)</h2>
+        <ul>
+          <li><strong>Diagnóstico primero:</strong> entender problema, contexto y objetivo de negocio.</li>
+          <li><strong>Soluciones ejecutables:</strong> propuestas viables, medibles y sostenibles.</li>
+          <li><strong>Equipo experto:</strong> enfoque multidisciplinario para acelerar resultados.</li>
+          <li><strong>Optimización real:</strong> balance entre eficiencia operativa y experiencia del usuario.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Hecho para publicar en GitHub Pages. Personaliza branding, dominio y
+        prompts con el contexto real de tu cliente.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
